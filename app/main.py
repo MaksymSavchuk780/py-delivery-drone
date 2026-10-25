@@ -26,6 +26,7 @@ class BaseRobot:
     def get_info(self) -> str:
         return f"Robot: {self.name}, Weight: {self.weight}"
 
+
 class FlyingRobot(BaseRobot):
     def __init__(
             self,
@@ -41,6 +42,7 @@ class FlyingRobot(BaseRobot):
 
     def go_down(self, step: str = 1) -> None:
         self.coords[2] -= step
+
 
 class DeliveryDrone(FlyingRobot):
     def __init__(
